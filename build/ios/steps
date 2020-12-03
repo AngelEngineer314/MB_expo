@@ -1,0 +1,24 @@
+openssl genrsa -out ios_distribution.key 2048
+
+openssl req -new -key ios_distribution.key -out CertificateSigningRequest.certSigningRequest -subj "/emailAddress=mbaa5950@gmail.com/CN=MB/C=AU"
+
+Go to https://developer.apple.com/ios/manage/certificates/team/distribute.action218 and sign in. Go to “certificates” under iOS.
+
+Under the Certificates menu on the left, click “All”, and then the “+” button aka: Add
+
+Pick either a Development “iOS App Development” or a Production “App Store and Ad Hoc” certificate. Note: You will need to go through the process twice to have a development and a production version of the app.
+
+Download the “Wordwide Developer Relations Certificate Authority” (AppleWWDRCA.cer) file from the same page
+
+Click Continue until you get to the “Generate your certificate” screen. Upload the .certSigningRequest file you created earlier and click generate. Download the generated ios_development.cer file.
+
+Create a Provisioning Profile by clicking on “All” under “Provisioning Profiles” on the left menu, and then clicking the “+” symbol, aka: add.
+Again, you will need to create both Development and a Distribution (App Store) versions.
+
+Create the Provisioning Profile for the App using the new .cer file (ios_development.cer)
+Download the .mobileprovision file
+
+In Command Prompt:
+openssl x509 -in ios_distribution.cer -inform DER -out ios_distribution.pem -outform PEM
+
+openssl pkcs12 -export -inkey ios_distribution.key -in ios_distribution.pem -out ios_distribution.p12 -passout pass:MBApp13#

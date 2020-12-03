@@ -1,0 +1,1 @@
+expo build:android --keystore-path=build/android/MB.jks --keystore-alias=QHNoYWxpbmhpbmd1L01CMw== --type=apk

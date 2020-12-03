@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "MB",
+    "slug": "MB",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cybeon.mb"
+    },
+    "android": {
+      "versionCode": 3,
+      "package": "com.cybeon.mb"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+export $(cat .env) && expo build:ios \
+    --apple-id=mbaa5950@gmail.com \
+    --dist-p12-path=build/ios/prod/ios_distribution.p12 \
+    --push-id=PWB5V75H67 \
+    --push-p8-path=build/ios/prod/AuthKey_PWB5V75H67.p8 \
+    --provisioning-profile-path=build/ios/prod/MBCK.mobileprovision
