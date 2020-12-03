@@ -17,4 +17,15 @@ at line 05: edit "width: "100%"" and save file.
 Above edit is for datepicker layout format.
 
 Also app keystore is in "App Keystore" folder with key and password.
+
+* install tip
+
+install following cli before expo start --android
+
+npm update -g expo-cli
+npm install
+npm i -f
+npm install react-native-screens
+rm -rf /tmp/metro-cache/*
+
  
